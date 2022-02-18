@@ -33,7 +33,6 @@ const fetch = require('node-fetch')
 const moment = require('moment-timezone')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
-const Apikey = JSON.parse(fs.readFileSync('./herman/Setting.json'))
 
 //࿇ ══━━━━━━━━━━━━━━━━━━━━✥SUBSCRIBE HERMAN CHANEL✥━━━━━━━━━━━━━━━━━━━━━━━━══ ࿇
 
@@ -71,7 +70,6 @@ const fakeherman = fs.readFileSync ('./media/thumb.jpg')
 
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
-
 //࿇ ══━━━━━━━━━━━━━━━━━━━━✥SUBSCRIBE HERMAN CHANEL✥━━━━━━━━━━━━━━━━━━━━━━━━══ ࿇
 		
 module.exports = herman = async (herman, mek, _welkom) => {
@@ -80,7 +78,7 @@ module.exports = herman = async (herman, mek, _welkom) => {
         mek = mek.messages.all()[0]
 		if (!mek.message) return
 		if (mek.key && mek.key.remoteJid == 'status@broadcast') return
-		global.blocked
+		global.blocke
     	mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
         const content = JSON.stringify(mek.message)
 		const from = mek.key.remoteJid
